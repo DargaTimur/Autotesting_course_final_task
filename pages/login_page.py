@@ -10,12 +10,13 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        # реализуйте проверку на корректный url адрес
+        # проверка на корректный url адрес
         assert self.browser.current_url, "Login URL link is not presented"
 
     def should_be_login_form(self):
+        # проверка формы входа на странице
         assert self.is_element_present(By.CSS_SELECTOR, "#login_form"), "LOGIN FORM is not presented"
 
     def should_be_register_form(self):
-        # реализуйте проверку, что есть форма регистрации на странице
+        # проверка формы регистрации на странице
         assert self.is_element_present(By.CSS_SELECTOR, "#register_form"), "REGISTER FORM link is not presented"
